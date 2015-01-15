@@ -21,8 +21,28 @@ $('document').ready(function(){
     $('#randPara').bind('click', addAPara);
     
     $('#removePara').bind('click', removeAPara);
+    
+    $('#show').css('visbility', 'hidden');
+    
+    $('#hide').bind('click', hideThePage);
+    
+    $('#show').bind('click', showThePage);
+    
+    
+            $   ('.what').css('background-color', 'yellow');
+    
+    $('#superHumans').accordion({header: "h3"});
 });
 
+
+function hideThePage(){
+    $('div').show('fold', {}, 2500);
+    $('#show').hide('puff', {}, 2500);
+}
+    function showThePage(){
+        $('div').show('fold', {}, 2500);
+        $('#show').hide('puff', {}, 2500);
+    }
 
 
 function removeAPara(){
